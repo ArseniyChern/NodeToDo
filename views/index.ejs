@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>TO DO List</title>
+    <link href="/css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <header class = "header">
+      <h1 class = "title">TO-DO List</h1>
+    </header>
+
+    <div class="addTask">
+
+      <h3 class = "addTaskLabel">Add Task</h3>
+
+      <form class="addTaskForm" action="/addTodo" method="GET">
+          <input type="text"  name="task" class = "addTaskInput" placeholder="Add Task"/>
+          <input type="submit" class = "addTaskButton" value = "Add"/>
+      </form>
+
+    </div>
+
+    <div class="showTasks">
+
+      <label class="showTasksLabel">Tasks</label>
+
+      <ul class = "showTasksList">
+        <%todos.forEach((data) => {
+          %>  <li>  <%= data.task%> </li><%
+        }) %>
+      </ul>
+
+    </div>
+
+    <footer class = "footer">
+
+      <h1 class = "copyrightText">&copy; 2018 mytodolist.com</h1>
+
+    </footer>
+
+  </body>
+</html>
